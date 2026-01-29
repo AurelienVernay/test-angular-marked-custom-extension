@@ -1,6 +1,5 @@
-import { Component, inject, Injector, model, OnInit, signal, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, inject, Injector, model, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SafeHtml } from '@angular/platform-browser';
 import { marked } from 'marked';
 
 import { customIdExtension } from './custom-id.plugin';
@@ -107,7 +106,6 @@ test balise custom [ID0]
 | Charlie   | \`100\`                   | Excellent         |
 | Denise    | ~~60~~                   | À améliorer       |
 `);
-  protected outputValue = signal<SafeHtml | null>(null);
 
   ngOnInit(): void {
     // inject marked extension to parse [ID0] into custom html tags
